@@ -6,35 +6,31 @@ A simple offline viewer for your exported ChatGPT conversations. This script con
 
 ## Features
 
-- Converts all ChatGPT conversations to individual HTML files  
-- Automatically extracts and displays local images if available  
-- Creates an index homepage to navigate between chats  
-- Adds "Back to Home" links in each conversation  
-- Basic readable design for chat bubbles and code blocks  
+- Converts all ChatGPT conversations to individual HTML files
+- Automatically extracts and displays local images if available
+- Creates an index homepage to navigate between chats
+- Adds "Back to Home" links in each conversation
+- Basic readable design for chat bubbles and code blocks
 - Fully offline. No internet required.
-
----
-
-## Download
-
-[Download main.exe](https://github.com/kirilldevs/chatgpt-backup-format/releases/download/v1.0.0/main.exe)
-
-SHA-256: `f23b7eb9e340f011d3bb03e1413d73aec0e62a47b66a67e98ffa9e86a5e0e164`
-
-To verify:
-
-```bash
-certutil -hashfile main.exe SHA256
-```
 
 ---
 
 ## How to Use (Simple Version - For Non-Developers)
 
-1. Download and unzip the latest `.zip` release.  
-2. Place your `conversations.json` file next to `main.exe`.  
-3. Double-click `main.exe`.  
+1. Download and unzip the latest `.zip` release.
+2. Place your `conversations.json` file next to `main.exe`.
+3. Double-click `main.exe`.
 4. A new folder named `html` will be created. Open `index.html` to view your chats.
+
+---
+
+## How to Export Your ChatGPT Backup
+
+1. Go to [https://chat.openai.com](https://chat.openai.com).
+2. Click on your name (bottom-left) → **Settings**.
+3. Go to **Data Controls** → **Export Data**.
+4. Click **Export**, wait for the email, and download the `.zip` file.
+5. Extract it and find `conversations.json`. Use this file with the app.
 
 ---
 
@@ -54,10 +50,24 @@ python main.py
 
 ---
 
+## SHA256 Checksum (For .exe Verification)
+
+```
+f23b7eb9e340f011d3bb03e1413d73aec0e62a47b66a67e98ffa9e86a5e0e164
+```
+
+To verify:
+
+```bash
+certutil -hashfile main.exe SHA256
+```
+
+---
+
 ## Notes
 
-- The script is standalone. No server or Python setup needed for `.exe` users.  
-- For Linux/macOS users: use `python main.py` after installing Python and dependencies.  
+- The script is standalone. No server or Python setup needed for `.exe` users.
+- For Linux/macOS users: use `python main.py` after installing Python and dependencies.
 - Export your data from https://chat.openai.com/export
 
 ---
