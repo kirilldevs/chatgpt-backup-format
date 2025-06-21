@@ -11,7 +11,10 @@ A simple offline viewer for your exported ChatGPT conversations. This script con
 - Creates an index homepage to navigate between chats  
 - Adds "Back to Home" links in each conversation  
 - Basic readable design for chat bubbles and code blocks  
-- Fully offline. No internet required.  
+- Fully offline. No internet required.
+
+![22222222222](https://github.com/user-attachments/assets/a93bd48e-f9e4-48c8-bf55-4b4287d12043)
+![3333333333](https://github.com/user-attachments/assets/66d8eba7-b5fb-4d9f-ba9b-8bc881bf538e)
 
 ---
 
