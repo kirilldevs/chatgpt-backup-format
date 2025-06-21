@@ -53,7 +53,7 @@ python main.py
 ## SHA256 Checksum (For .exe Verification)
 
 ```
-f23b7eb9e340f011d3bb03e1413d73aec0e62a47b66a67e98ffa9e86a5e0e164
+c0ca90cb0ea5b6da23364342af06105592500b2a60e5459b95515fbf5f0606b3
 ```
 
 To verify:
