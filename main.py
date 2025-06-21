@@ -7,6 +7,9 @@ from glob import glob
 Path("json").mkdir(exist_ok=True)
 Path("html").mkdir(exist_ok=True)
 
+def remove_private_use_chars(text):
+    return re.sub(r'[\uE000-\uF8FF]', '', text)
+
 with open("conversations.json", "r", encoding="utf-8") as f:
     conversations = json.load(f)
 
@@ -33,7 +36,7 @@ for i, convo in enumerate(conversations):
 
         for part in parts:
             if isinstance(part, str) and part.strip():
-                lines = part.split("\n")
+                lines = [remove_private_use_chars(line) for line in part.split("\n")]
                 converted = []
                 for line in lines:
                     if re.match(r'^https?:\/\/.*\.(png|jpg|jpeg|gif)$', line.strip(), re.IGNORECASE):
@@ -153,7 +156,7 @@ for i, convo in enumerate(conversations):
     </style>
 </head>
 <body>
-<div class="chat-container">
+<div class="chat-container" dir="auto" style="unicode-bidi: plaintext;">
 <h2>{title}</h2>
 <p><a href="../index.html">← Back to Home</a></p>
 {conversation_html}
